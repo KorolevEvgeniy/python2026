@@ -8,6 +8,11 @@ on:
 
 jobs:
   analyze:
+    permissions:
+      contents: write
     uses: Pau1R/python2026/.github/workflows/task_analysis.yml@main
     with:
       base_sha: ${{ github.event.before }}
+    secrets:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      TASKS_REPO_TOKEN: ${{ secrets.TASKS_REPO_TOKEN }}
