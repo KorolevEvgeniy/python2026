@@ -22,5 +22,4 @@ for guide in guides:
 print("\n4. Статистика весов:")
 total_ves = sum(person["вес_рюкзака"] for person in spisok_uchastnikov)
 sredniy_ves = total_ves / len(spisok_uchastnikov)
-print(f"   Общий вес всех рюкзаков: {total_ves} кг")
 print(f"   Средний вес рюкзака: {sredniy_ves:.1f} кг")
