@@ -23,25 +23,27 @@ INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount) VALUES
 	(101, 1, "2025-02-01", 100.50),
     (102, 2, "2025-02-02", 200.75);
 	
---SELECT
---    Customers.FirstName,
---    Customers.LastName,
---    Orders.OrderID,
---   Orders.TotalAmount
---FROM Customers
---JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+SELECT
+    Customers.FirstName,
+    Customers.LastName,
+    Orders.OrderID,
+    Orders.TotalAmount
+FROM Customers
+JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 
---SELECT
---    Customers.FirstName,
---    Customers.LastName,
---    Orders.OrderID,
---    Orders.TotalAmount
---FROM Customers
---LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+SELECT
+    Customers.FirstName,
+    Customers.LastName,
+    Orders.OrderID,
+    Orders.TotalAmount
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 
-SELECT OrderID, Orders.CustomerID, OrderDate, TotalAmount
-FROM Orders;
-EXCEPT
-SELECT OrderID, Orders.CustomerID, OrderDate, TotalAmount
-FROM Orders;
-LEFT JOIN Customers ON Orders.CustomerID = Customers.CustomerID WHERE Customers.CustomerID IS NULL;
+SELECT
+    Orders.OrderID,
+    Orders.CustomerID,
+    Orders.OrderDate,
+    Orders.TotalAmount
+FROM Orders
+LEFT JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+WHERE Customers.CustomerID IS NULL;
