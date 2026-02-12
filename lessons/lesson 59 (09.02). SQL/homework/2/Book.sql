@@ -17,10 +17,10 @@ INSERT INTO Books (BookID, Title, AuthorID, Price) VALUES
 (9, 'Зулейха открывает глаза', 5, 650.00),
 (10, 'Эшелон на Самарканд', 5, 500.00);
 
-DELETE FROM Books;   -- Сначала дочерняя таблица
-DELETE FROM Authors; -- Затем родительская таблица
+--DELETE FROM Books;   -- Сначала дочерняя таблица
+--DELETE FROM Authors; -- Затем родительская таблица
 
-SELECT COUNT(*) FROM Authors;
-SELECT COUNT(*) FROM Books;
+--SELECT COUNT(*) FROM Authors;
+--SELECT COUNT(*) FROM Books;
 
-SELECT name FROM sqlite_master WHERE type='table';
+--SELECT name FROM sqlite_master WHERE type='table';
